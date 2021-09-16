@@ -1,5 +1,5 @@
-alias l="ls -lahs"
-alias ll="ls -lahs"
+alias ll="ls -lahs --color=auto"
+alias l='ls -lahF --color=auto'
 alias tmuxa="tmux attach-session -t del"
 alias tmuxc="tmux new-session -s del"
 alias tmuxn="tmux new-session -s del"
