@@ -6,12 +6,9 @@ alias l='ls -lahs'
 alias ..="cd .."
 alias ...="cd ../.."
 ## TMUX
-alias tmuxa="tmux attach-session -t del"
-alias tmuxc="tmux new-session -s del"
-alias tmuxn="tmux new-session -s del"
-alias tmuxl="tmux list-sessions"
 alias tl="tmux list-sessions"
 alias tn="tmux new-session -s del"
+alias tc="tmux new-session -s del"
 alias ta="tmux attach-session -t del"
 ## SSH SSL/TLS keychain
 /usr/bin/keychain --nogui $HOME/.ssh/{first.key,second.key}
