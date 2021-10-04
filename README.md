@@ -8,3 +8,7 @@ copy vimrc content to your ~/.vimrc file (create if missing)
 ```bash
 apt install keychain
 ```
+# git config
+copy tontent of gitconfig file to ~/.gitconfig
+```bash
+cat gitconfig >> ~/.gitconfig
