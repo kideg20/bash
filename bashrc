@@ -17,13 +17,14 @@ alias tl="tmux list-sessions"
 alias tn="tmux new-session -s del"
 alias ta="tmux attach-session -t del"
 ## GIT
+alias got="git "
 alias clone="git clone"
 alias push="git push"
 alias pull="git pull"
-alias br="git branch"
-alias st="git status"
-alias co="git checkout"
-alias ci="git pull && git add . && cimes"
+alias gb="git branch"
+alias gs="git status"
+alias gco="git checkout"
+alias gc="git pull && git add . && cimes"
 function cimes () {
   echo "Enter commit message: "
   read commit_message
