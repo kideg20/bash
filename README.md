@@ -19,7 +19,7 @@ su -
 apt update && apt upgrade
 apt install sudo
 exit
-sudo apt install -y wget curl net-tools git vim
+sudo apt install -y wget curl net-tools git vim silversearcher-ag
 ```
 # Install kubectl
 https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
