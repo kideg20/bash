@@ -12,6 +12,7 @@ apt install keychain
 copy tontent of gitconfig file to ~/.gitconfig
 ```bash
 cat gitconfig >> ~/.gitconfig
+```
 # Default programms
 ```
 su - 
