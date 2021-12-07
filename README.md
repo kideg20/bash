@@ -18,7 +18,7 @@ su -
 apt update && apt upgrade
 apt install sudo
 exit
-sudo apt install -y wget curl net-tools git
+sudo apt install -y wget curl net-tools git vim
 ```
 # Install kubectl
 https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
