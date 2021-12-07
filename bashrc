@@ -1,4 +1,5 @@
 # Aliases
+alias vi='vim'
 ## ls cd 
 alias ll='ls -alF'
 alias la='ls -A'
