@@ -6,6 +6,7 @@ alias la='ls -A'
 alias l='ls -lahs'
 alias ..="cd .."
 alias ...="cd ../.."
+alias nc='nc -zv'
 ## TMUX
 alias tl="tmux list-sessions"
 alias tn="tmux new-session -s del"
