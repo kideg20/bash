@@ -1,5 +1,9 @@
 # Bash cheat codes
 
+## Convert to one line - UNIX/Linux
+```bash
+awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' <certificate name>
+```
 ## working with env
 ```bash
 echo "peremennaja=\$znachenie" > test.conf.tpl
