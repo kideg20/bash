@@ -1,0 +1,20 @@
+# UBUNTU 20 LTS
+## Set static IP address
+/etc/netplan/00-installer-config.yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth0:
+      addresses:
+        - 192.168.0.XX/24
+      gateway4: 192.168.0.1
+      nameservers:
+          search: [mas.local]
+          addresses: [192.168.0.1, 8.8.8.8]
+
+
+## Change hostname
+sudo hostnamectl set-hostname newNameHere
+sudo nano /etc/hosts
+sudo reboot
