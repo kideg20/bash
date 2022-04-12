@@ -1,0 +1,17 @@
+wget
+curl
+net-tools
+git
+vim
+silversearcher-ag
+bash-completion
+unzip
+telnet
+sudo
+ssh
+openssh-server
+openssh-client
+netcat
+nmap
+keychain
+binutils
