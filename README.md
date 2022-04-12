@@ -8,6 +8,11 @@ copy vimrc content to your ~/.vimrc file (create if missing)
 ```bash
 apt install keychain
 ```
+To start agent
+```
+/usr/bin/keychain --nogui $HOME/.ssh/sshfile.key
+source $HOME/.keychain/$HOSTNAME-sh
+```
 # git config
 copy tontent of gitconfig file to ~/.gitconfig
 ```bash
