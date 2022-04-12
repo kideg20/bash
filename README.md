@@ -43,6 +43,8 @@ echo "$(u)  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$(u)
 sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 cat /etc/default/grub | grep -v "^GRUB_CMDLINE_LINUX_DEFAULT" | sudo tee /etc/default/grub && echo 'GRUB_CMDLINE_LINUX_DEFAULT="quiet splash ipv6.disable=1"' | sudo tee -a /etc/default/grub
+sudo update-grub && sudo reboot
+
 
 ```
 # Install kubectl
