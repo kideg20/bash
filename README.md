@@ -14,12 +14,18 @@ copy tontent of gitconfig file to ~/.gitconfig
 cat gitconfig >> ~/.gitconfig
 ```
 # Default programms
+copy packages.txt from github
+run as root
 ```
-su - 
-apt update && apt upgrade
-apt install sudo
-exit
-sudo apt install -y wget curl net-tools git vim silversearcher-ag bash-completion
+xargs apt install -y < packages.txt
+```
+# SUDO 
+run as root
+```
+apt update && apt install sudo
+u=<USER>
+usermod -aG sudo del
+echo "$(u)  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$(u)
 ```
 # Install kubectl
 https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
