@@ -14,7 +14,7 @@ shopt -s cmdhist
 
 
 # PS edit
-export PS1="\e[0;36mDEL \e[0;32m\w \e[0;36m\$ \e[m"
+export PS1="\[\e[36m\]DEL\[\e[m\] \[\e[32m\]\w \[\e[36m\]\$ \e[m"
 
 # SSH SSL/TLS keychain
 /usr/local/bin/keychain --nogui $HOME/.ssh/id_rsa
@@ -23,7 +23,7 @@ source $HOME/.keychain/$HOSTNAME-sh
 # Custom aliases
 ## MAC
 alias f='open -a Finder ./'
-## vi
+## VI
 alias vi='vim'
 ## LS
 alias l='ls -lahs'
@@ -35,6 +35,8 @@ alias tmp="cd $HOME/tmp"
 ## IPCONFIG
 alias ip='ifconfig | grep inet'
 ## GIT
+alias status='git status'
+alias switch='git switch'
 alias clone="git clone"
 alias push="git push"
 alias pull="git pull"
@@ -44,6 +46,9 @@ function cimes () {
   echo "Enter commit message: "
   read commit_message
   git commit -m "${commit_message}"
+}
+git_branch() {
+    git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/*\(.*\)/\1/'
 }
 ## Kubernetes
 source <(kubectl completion bash)
