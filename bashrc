@@ -14,7 +14,7 @@ shopt -s cmdhist
 
 
 # PS edit
-export PS1="\[\e[36m\]DEL\[\e[m\] \[\e[32m\]\w \[\e[36m\]\$ \e[m"
+export PS1="\[\033[0;31m\] DEL \[\033[00m\]\[\033[0;92m\]\w\[\033[00m\] \[\033[0;36m\]\$\[\033[00m\] "
 
 # SSH SSL/TLS keychain
 /usr/local/bin/keychain --nogui $HOME/.ssh/id_rsa
@@ -40,7 +40,7 @@ alias switch='git switch'
 alias clone="git clone"
 alias push="git push"
 alias pull="git pull"
-alias gco="git checkout"
+alias checkout="git checkout"
 alias gc="git pull && git add . && cimes"
 function cimes () {
   echo "Enter commit message: "
