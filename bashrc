@@ -37,12 +37,13 @@ alias ip='ifconfig | grep inet'
 ## GIT
 alias status='git status'
 alias switch='git switch'
-alias clone="git clone"
-alias push="git push"
-alias pull="git pull"
-alias checkout="git checkout"
-alias gc="git pull && git add . && cimes"
-function cimes () {
+alias clone='git clone'
+alias push='git push'
+alias pull='git pull'
+alias checkout='git checkout'
+alias branch='git branch'
+alias gc='git pull && git add . && git_commit'
+function git_commit () {
   echo "Enter commit message: "
   read commit_message
   git commit -m "${commit_message}"
