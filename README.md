@@ -193,6 +193,22 @@ source $HOME/.keychain/$HOSTNAME-sh
 ```
 add this to your .bashrc
 
+## ssh config
+Disables host check and changes default user to ubuntu
+```bash
+mkdir ~/.ssh
+echo 'Host *
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+  User ubuntu' | tee  ~/.ssh/config
+```
+if you want to exclud host:
+```bash
+Host !192.168.0.1 !192.168.0.2 *
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+  User ubuntu
+```
 
 # OLD 
 
