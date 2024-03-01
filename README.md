@@ -2,7 +2,9 @@
 ## SUDO
 change `my_user` to your username and `run as root` # su -
 ```
+# Change my_user to your user
 USER=my_user
+
 apt update && apt install sudo
 usermod -aG sudo $USER
 echo "$(USER)  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$(USER)
@@ -134,9 +136,8 @@ sudo update-grub
 sudo systemctl reboot
 ```
 ## kubectl
+`Latest version` OR `Specific version`
 ### Latest version
-```bash
-
 ```bash
 # Download the latest release with the command:
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
